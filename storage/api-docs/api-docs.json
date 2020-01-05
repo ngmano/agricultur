@@ -1,0 +1,78 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "darius@matulionis.lt"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/test": {
+            "post": {
+                "tags": [
+                    "pet"
+                  ],
+                  "summary": "Updates a pet in the store with form data",
+                  "description": "",
+                  "operationId": "updatePetWithForm",
+                  "consumes": [
+                      {
+                        "content-type":"application/x-www-form-urlencoded"
+                      }
+                  ],
+                  "parameters": [
+                    {
+                      "name": "name",
+                      "in": "formData",
+                      "description": "Updated name of the pet",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "name": "status",
+                      "in": "header",
+                      "description": "Updated status of the pet",
+                      "required": false,
+                      "type": "string"
+                    }
+                  ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    },
+                    "404": {
+                        "description": "Pet not found"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "project",
+            "description": "Everything about your Projects",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
+            "name": "user",
+            "description": "Operations about user",
+            "externalDocs": {
+                "description": "Find out more about",
+                "url": "http://swagger.io"
+            }
+        }
+    ],
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}
