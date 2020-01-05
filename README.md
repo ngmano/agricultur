@@ -1,7 +1,7 @@
 # agricultur
 ## Instruction
 ** Step 1: ** After Clone > Install Composer\
-** Step 2: ** Config Database in > config/app.php\
+** Step 2: ** Config Database in > config/database.php\
 ** Step 3: ** Run > Migration\
 ** Step 4: ** Run 'Seed' for get admin user data
 
